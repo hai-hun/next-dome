@@ -1,0 +1,18 @@
+.buttonBox {
+  display: inline-flex;
+  width: auto;
+  padding: 4px 8px;
+  margin: 16px 20px 16px 0;
+  cursor: pointer;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--Text-text-gray, #676767);
+  color: var(--Color-White, #fff);
+  font-family: "NEXT Book";
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  /* 9.9px */
+}

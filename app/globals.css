@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "NEXT Book";
+  src: url("/NEXT-Book-Bold.otf") format("opentype");
+}
+
+.layout {
+  background: #030303;
+  color: var(--Text-text-gray, #676767);
+  --Text-text-gray: #676767;
+  --Text-text-white: #ededed;
+  --Text-text-white---on-dark: #f2f2f2;
+
+  --Gradiant-gradiant---syntax: linear-gradient(
+    180deg,
+    #38c1a5 -0.01%,
+    #0891d5 99.99%
+  );
+
+  --Gradiant-gradiant---learning-track: linear-gradient(
+    180deg,
+    #d9e313 0%,
+    #3cbc34 100%
+  );
+}
+
+.pageBox {
+  /* display: flex; */
+  position: relative;
+  width: 1600px;
+  padding: 0 52px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.cardListBox {
+  width: 2200px;
+  transition: transform 1s ease;
+}
+.buttonBox {
+  position: absolute;
+  top: 0;
+  width: 130px;
+  height: 378px;
+  background: linear-gradient(
+    270deg,
+    #030303 0%,
+    rgba(3, 3, 3, 0.8) 55.46%,
+    rgba(3, 3, 3, 0) 100%
+  );
+  z-index: 1000;
+}
+
+.nextButton,
+.preButton {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  cursor: pointer;
+  color: red;
+  /* filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
+    contrast(100%); */
+
+  &:hover {
+    filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
+      contrast(100%);
+  }
+  &:active {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+      brightness(100%) contrast(100%);
+  }
+}
+.pre {
+  left: 0px;
+}
+.next {
+  right: 0px;
+}

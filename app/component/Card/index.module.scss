@@ -1,0 +1,129 @@
+.cardLayout {
+  width: 416px;
+  height: 278px;
+  position: relative;
+  margin: 70px 60px;
+  display: inline-block;
+  .cardHover {
+    width: 416px;
+    height: 278px;
+    background-size: cover;
+    opacity: 0;
+    position: absolute;
+
+    z-index: -1;
+  }
+  &:hover {
+    .cardHover {
+      opacity: 1;
+    }
+    .card {
+      left: 4px;
+      top: -4px;
+    }
+  }
+  .card {
+    width: 416px;
+    height: 278px;
+    background-size: cover;
+    padding: 36px 30px 0 39px;
+    position: absolute;
+    .xian {
+      width: 46px;
+      height: 4px;
+      border-radius: 11px;
+      margin-bottom: 16px;
+    }
+
+    .theme {
+      .programming {
+        color: var(--Text-text-white, #ededed);
+        font-family: "NEXT Book";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+      }
+      .button {
+        margin: 16px 0;
+      }
+      .notes {
+        color: var(--Text-text-gray, #676767);
+        font-family: "NEXT Book";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 13.2px */
+      }
+    }
+
+    .list {
+      width: 334px;
+      margin-top: 38px;
+      .row {
+        display: flex;
+        justify-content: space-between;
+        height: 35px;
+        border-bottom: 1px solid #282828;
+        .left {
+          color: var(--Text-text-gray, #676767);
+          font-family: "NEXT Book";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 110%; /* 13.2px */
+        }
+        .right {
+          color: var(--Text-text-white, #ededed);
+          text-align: right;
+          font-family: "Neue Machina";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 100%; /* 14px */
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      margin-top: 75px;
+      font-size: 12px;
+      align-items: center;
+      .box {
+        width: 90px;
+        display: flex;
+        color: var(--Text-text-white---on-dark, #f2f2f2);
+        font-family: "Neue Machina";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 12px */
+        img {
+          margin-right: 8px;
+          width: 14px;
+          height: 14px;
+        }
+      }
+      .completed {
+        display: inline-flex;
+        padding: 8px 16px;
+        margin-right: 18.5px;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        border-radius: 40px;
+        background: var(--button-card-dark-gray-button, #2a2a2a);
+        .text {
+          color: var(--status-Progress-green, #9efa13);
+          text-align: right;
+          font-family: "NEXT Book";
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 110%; /* 11px */
+        }
+      }
+    }
+  }
+}

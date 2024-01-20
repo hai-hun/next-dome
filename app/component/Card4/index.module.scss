@@ -1,0 +1,91 @@
+.cardLayout {
+  width: 416px;
+  height: 278px;
+  flex-shrink: 0;
+  position: relative;
+  margin: 70px 60px;
+  display: inline-block;
+  .card {
+    width: 416px;
+    height: 278px;
+    flex-shrink: 0;
+    border-radius: 36px;
+    background: #111;
+    position: absolute;
+    padding: 36px 20px 0 39px;
+    .top {
+      display: flex;
+      .left {
+        .xian {
+          width: 46px;
+          height: 4px;
+          border-radius: 11px;
+          background: var(
+            --Gradiant-gradiant---concept,
+            linear-gradient(180deg, #e0ad38 -0.01%, #eb3e1c 99.99%)
+          );
+        }
+        .programming {
+          color: var(--Text-text-white, #ededed);
+          font-family: "NEXT Book";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 100%;
+          margin-top: 150px;
+        }
+      }
+      .right {
+        width: 243px;
+        height: 217px;
+        flex-shrink: 0;
+        background: url("/yuan.png"), no-repeat;
+      }
+    }
+
+    .footer {
+      display: flex;
+      font-size: 12px;
+      align-items: center;
+      justify-content: flex-end;
+      .box {
+        width: 90px;
+        display: flex;
+        color: var(--Text-text-white---on-dark, #f2f2f2);
+        font-family: "Neue Machina";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 12px */
+        margin-right: 36px;
+        img {
+          margin-right: 8px;
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+  .cardHover {
+    width: 416px;
+    height: 278px;
+    opacity: 0;
+    position: absolute;
+
+    background: var(
+      --Gradiant-gradiant---concept,
+      linear-gradient(180deg, #e0ad38 -0.01%, #eb3e1c 99.99%)
+    );
+    border-radius: 36px;
+    z-index: -1;
+  }
+  &:hover {
+    .cardHover {
+      opacity: 1;
+    }
+    .card {
+      left: 4px;
+      top: -4px;
+    }
+  }
+}
